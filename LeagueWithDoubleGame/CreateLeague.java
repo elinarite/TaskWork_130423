@@ -20,6 +20,9 @@ public class CreateLeague {
      */
     private static final int NUM_PLAYERS_PER_LEAGUE = 5;
 
+    // TODO - Следующий апргрейд проекта - переделай код,
+    //  чтобы у каждого игрока был уникальный номер во всех лигах
+
     /**
      * Метод createLeague принимает список List<Player> в качестве входных
      * данных и добавляет к нему NUM_PLAYERS_PER_LEAGUE количество объектов Player.

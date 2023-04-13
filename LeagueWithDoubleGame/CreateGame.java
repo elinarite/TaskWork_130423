@@ -12,6 +12,9 @@ public class CreateGame {
      * Для каждой пары игроков вызывается метод playMatch для имитации матча между ними.
      * После моделирования всех матчей возвращается обновленный список игроков.
      */
+    // TODO - два вопроса:
+    // 1. Зачем тут протектед?
+    // 2. зачем перемешивать игроков? Ведь от перемены их положения в группе ничего не меняется
     protected List<Player> game(List<Player> players) {
           Collections.shuffle(players);
             for (int i = 0; i < League.values().length; i++) {
@@ -22,6 +25,7 @@ public class CreateGame {
         return players;
     }
 
+    //TODO -  doubleGame? "Двойная игра"? Лучше назвать playAdditionalGames
     /**
      * Этот код определяет метод с именем doubleGame,
      * который принимает в качестве входных данных список объектов Player и имитирует
@@ -52,7 +56,10 @@ public class CreateGame {
      * для которой установлено значение 1. Если оба игрока набирают одинаковое количество очков,
      * очки обоих игроков обновляются путем добавления переменной drawPoints. , который установлен на 0,5.
      */
+    //TODO - проверить логику присвоения победы, я тут победы игрока1 вообще не вижу
+    // игроку 2 почему то присваивается счет игрока1
     private void playMatch(Player p1, Player p2) {
+        // TODO - эти очки лучше объявить константой
         double winPoints = 1;
         double drawPoints = 0.5;
         double p1Score = Math.random();
