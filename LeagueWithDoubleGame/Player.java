@@ -8,7 +8,6 @@ public class Player {
 
     public Player() {
     }
-// TODO не ясно зачем игроку имя, ведь ты используешь тольок номер, наверное лучше убрать
     public Player(String name, int playerNumber, double score) {
         this.name = name;
         PlayerNumber = playerNumber;
@@ -38,6 +37,7 @@ public class Player {
     public void setScore(double score) {
         this.score = score;
     }
+
 
     @Override
     public String toString() {
