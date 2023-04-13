@@ -57,6 +57,7 @@ public class GeneratorEmployeesList {
         Iterator<Employee> iterator = employeeList.iterator();
         while (iterator.hasNext()) {
             Employee employee = iterator.next();
+     // TODO - шо за странный пустой if, на условие тру нет никаких команд ?
             if (employee.getRating().getRatingScore() == 0) {
             } else {
                 employee.setSalary(employee.getSalary() * employee.getRating().getRatingScore());
@@ -84,6 +85,10 @@ public class GeneratorEmployeesList {
      * params: which sorts by rating and adds a bonus to the salary.
      * params: System.out.println(employeeListAfterSalaryBonus) - displays a list of employees with new salary
      */
+    // TODO - если это метод принт, то в нем не должно быть другого.
+    //  Чтение числа работников, сортировка, пересчет зп - все это не про принт
+    //  ы бы вообще у класса компани сделал бы метод принт.
+    //  Есть правило, что методы обработки должны быть как можно ближе к данным
     public static void print() {
         scanNumberOfEmployee();
         List<Employee> employeeListBeforeSalaryBonus = createEmployeeList(getNumberOfEmployees());

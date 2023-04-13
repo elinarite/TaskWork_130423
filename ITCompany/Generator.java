@@ -8,6 +8,7 @@ public class Generator {
     /**
      * method, which generates name of employee
      */
+    // TODO - generateName  лучше
     public static StringBuilder nameGeneration() {
         String abc = "abcdefghijklmnoprstuvz";
 
@@ -29,7 +30,7 @@ public class Generator {
         double minSalary = 2000;
         double maxSalary = 10000;
         int age = random.nextInt(maxAge) + minAge;
-        double salary = random.nextDouble(maxSalary) + minSalary;
+        double salary = random.nextDouble() + minSalary;
         Rating rating = Rating.values()[random.nextInt(Rating.values().length)];
         Department department = Department.values()[random.nextInt(Department.values().length)];
         return new Employee(name, age, salary, rating, department);
