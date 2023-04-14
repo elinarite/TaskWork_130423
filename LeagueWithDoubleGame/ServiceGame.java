@@ -40,7 +40,7 @@ public class ServiceGame {
         for (Map.Entry<League, List<Player>> entry : leagueList.entrySet()) {
             List<Player> leaguePlayers = entry.getValue();
             for (int i = 0; i < League.values().length; i++) {
-                for (int j = 0; j < League.values().length; j++) {
+                for (int j = i + 1; j < League.values().length; j++) {
                     if (leaguePlayers.get(i).getScore() == leaguePlayers.get(j).getScore()) {
                         playMatch(leaguePlayers.get(i), leaguePlayers.get(j));
                     }
@@ -77,7 +77,7 @@ public class ServiceGame {
      */
     protected EnumMap<League, List<Player>> sortMap(EnumMap<League, List<Player>> leagueList){
         for (List<Player> players : leagueList.values()) {
-            Collections.sort(players, Comparator.comparingInt(p -> (int) -p.getScore()));
+            Collections.sort(players, Comparator.comparingDouble(p -> -p.getScore()));
         }
         return leagueList;
     }

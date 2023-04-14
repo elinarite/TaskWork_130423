@@ -8,8 +8,7 @@ public class Generator {
     /**
      * method, which generates name of employee
      */
-    // TODO - generateName  лучше
-    public static StringBuilder nameGeneration() {
+    public static StringBuilder generateName() {
         String abc = "abcdefghijklmnoprstuvz";
 
         int generationEmployeeNameLength = (random.nextInt(10) + 3);
@@ -24,7 +23,7 @@ public class Generator {
      * method, which generates employees
      */
     public static Employee createRandomEmployee() {
-        String name = String.valueOf(nameGeneration());
+        String name = String.valueOf(generateName());
         int minAge = 18;
         int maxAge = 60;
         double minSalary = 2000;
