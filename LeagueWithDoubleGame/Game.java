@@ -31,7 +31,7 @@ public class Game {
             List<Player> players = leagueList.get(league);
             System.out.printf("%s:%n", league);
             for (Player player : players) {
-                System.out.printf("  %s, score: %.1f%n", player.getName(), player.getScore());
+                System.out.printf("  %-3s %-5d score: %.1f%n", player.getName(), player.getPlayerNumber(), player.getScore());
             }
             System.out.println("-------------------------");
         }
