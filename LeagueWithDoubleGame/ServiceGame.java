@@ -17,7 +17,7 @@ public class ServiceGame {
      * из своей лиги. В итоге метод возвращает этот же список leagueList, но уже с результатами
      * всех сыгранных матчей.
      */
-    protected EnumMap<League, List<Player>> game(EnumMap<League, List<Player>> leagueList) {
+    protected void game(EnumMap<League, List<Player>> leagueList) {
         for (Map.Entry<League, List<Player>> entry : leagueList.entrySet()) {
             List<Player> leaguePlayers = entry.getValue();
             for (int i = 0; i < League.values().length; i++) {
@@ -26,7 +26,6 @@ public class ServiceGame {
                 }
             }
         }
-        return leagueList;
     }
 
     /**
@@ -36,7 +35,7 @@ public class ServiceGame {
      * имеют ли они одинаковое количество очков, и если да, то запускает метод
      * playMatch для проведения матча между этими игроками.
      */
-    protected EnumMap<League, List<Player>> playAdditionalGames(EnumMap<League, List<Player>> leagueList) {
+    protected void playAdditionalGames(EnumMap<League, List<Player>> leagueList) {
         for (Map.Entry<League, List<Player>> entry : leagueList.entrySet()) {
             List<Player> leaguePlayers = entry.getValue();
             for (int i = 0; i < League.values().length; i++) {
@@ -47,7 +46,6 @@ public class ServiceGame {
                 }
             }
         }
-        return leagueList;
     }
 
     /**
